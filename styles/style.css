@@ -1,3 +1,27 @@
 body {
   font-family: "Inter", "Noto Sans KR", sans-serif;
 }
+
+.index_header {
+  height: 88px;
+  width: 100%;
+  background-color: blue;
+}
+
+.index_main_1 {
+  height: 590px;
+  width: 100%;
+  background-color: rgb(41, 153, 87);
+}
+
+.index_main_2 {
+  height: 714px;
+  width: 100%;
+  background-color: rgb(193, 243, 160);
+}
+
+.index_footer {
+  height: 166px;
+  width: 100%;
+  background-color: rgb(161, 39, 155);
+}
