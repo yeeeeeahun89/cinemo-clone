@@ -28,6 +28,264 @@ body {
   background-color: rgb(161, 39, 155);
 }
 
+.index_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #101113;
+  min-width: 400px;
+}
+
+.netflex_identity {
+  width: 113px;
+  height: 29px;
+  min-width: 113px;
+}
+
+.header_nav_container {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 56px;
+  margin-left: 64px;
+}
+
+.header_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #acaeb3;
+}
+
+.nav_home {
+  color: #f3f1ed;
+}
+
+.header_logo_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.header_profile_container {
+  width: 149px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-right: 64px;
+  white-space: nowrap;
+}
+
+.main_profile_image {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+}
+
+.user_avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.initial_y {
+  color: #f3f1ed;
+  width: 11px;
+  height: 19px;
+  font-size: 15.36px;
+  position: absolute;
+  top: 6.5px;
+  left: 10.5px;
+}
+
+.user_my_page {
+  font-size: 14px;
+  color: #f3f1ed;
+}
+
+.index_main_1 {
+  height: 590px;
+  width: 100%;
+  position: relative;
+}
+
+.hero_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero_image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero_image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #101113 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.index_main_1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #101113 0%, transparent 96%);
+  pointer-events: none;
+}
+
+.hero_text {
+  max-width: 540px;
+  min-width: 342px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 1;
+  margin-left: 64px;
+}
+
+.hero_action {
+  width: 100%;
+  height: 100%;
+  gap: 12px;
+}
+
+.hero_btn_more {
+  width: 151px;
+  height: 48px;
+  background-color: #f28d77;
+  color: #241512;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero_btn_wish {
+  width: 151px;
+  height: 48px;
+  background-color: #232529;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero_top span:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #f28c78;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.hero_top_1-1 {
+  font-size: 12px;
+  color: #f28d77;
+  margin-right: 12px;
+}
+
+.hero_top_1-2 {
+  font-size: 10px;
+  color: #acaeb3;
+}
+
+.hero_title_1-1 {
+  font-size: 64px;
+  color: #f3f1ed;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.hero_title_1-2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 11px;
+  color: #acaeb3;
+}
+
+.hero_info {
+  font-size: 11px;
+  color: #acaeb3;
+  margin-bottom: 24px;
+}
+
+.hero_desc {
+  font-size: 16px;
+  color: #d2d3d5;
+  margin-bottom: 24px;
+}
+
+.hero_right_text {
+  position: absolute;
+  right: 64px;
+  bottom: 72px;
+  color: white;
+  z-index: 1;
+  text-align: right;
+}
+
+@media (max-width: 390px) {
+  .hero_right_text {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .index_main_1 {
+    height: 573px;
+  }
+
+  .hero_image {
+    height: 50%;
+  }
+
+  .hero_text {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+.hero_right_text_1 {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.hero_right_text_2 {
+  font-size: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* main-movie-style */
 .movie-section {
   box-sizing: border-box;
