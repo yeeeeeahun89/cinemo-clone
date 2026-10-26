@@ -25,3 +25,188 @@ body {
   width: 100%;
   background-color: rgb(161, 39, 155);
 }
+
+/* main-movie-style */
+.movie-section {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #101113;
+  justify-content: flex-start;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 64px;
+  gap: 8px;
+}
+
+.section-heading {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.section-title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: auto;
+  margin: 0;
+  color: #f3f1ed;
+  white-space: nowrap;
+}
+
+.section-count {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  line-height: auto;
+  margin: 0;
+  color: #7e8289;
+  white-space: nowrap;
+}
+
+.section-description {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  line-height: auto;
+  margin: 0;
+  color: #acaeb3;
+  white-space: nowrap;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 64px 0;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card img {
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+.movie-title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #f3f1ed;
+  line-height: auto;
+  margin: 0;
+  padding-bottom: 4px;
+  white-space: nowrap;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 11px;
+  color: #acaeb3;
+  line-height: auto;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.movie-info-dot::after {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50px;
+  margin: 0 8px 4px;
+  background-color: #acaeb3;
+  content: "";
+}
+
+@media screen and (max-width: 390px) {
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-count {
+    visibility: hidden;
+  }
+
+  .movie-list {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    padding: 20px 64px 0;
+    gap: 20px;
+    overflow-x: auto;
+  }
+}
+
+/* footer CSS */
+#footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40px 64px;
+
+  background-color: #101113;
+  border-top: 1px solid #303237;
+  overflow: auto;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.footer-menu a {
+  color: #acaeb3;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: auto;
+}
+
+.footer-info {
+  color: #7e8289;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 11px;
+  margin-top: 20px;
+  line-height: 180%;
+}
+
+.footer-info span {
+  display: inline;
+}
+
+.footer-copyright {
+  color: #7e8289;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  margin-top: 20px;
+  line-height: auto;
+}
+
+@media (max-width: 390px) {
+  #footer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 32px 24px;
+  }
+
+  .footer-menu {
+    gap: 20px;
+  }
+
+  .footer-info span {
+    display: block;
+    margin: 0;
+  }
+}
