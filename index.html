@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/cinemo-pr.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,8 +14,31 @@
     <title>cinemo</title>
   </head>
   <body>
-    <header>
-      <div class="index_header">헤더 영역입니다.</div>
+    <header class="index_header">
+      <section class="header_nav_container">
+        <div class="header_logo_container">
+          <img class="netflex_identity" src="./imgs/netflex-identity.svg" alt="아이덴티티 로고"></span>
+        </div>
+        <nav>
+          <ul class="header_nav">
+            <li><a class="nav_home" href="#">홈</a></li>
+            <li><a class="nav_movie" href="#">영화</a></li>
+            <li><a class="nav_series" href="#">시리즈</a></li>
+            <li><a class="nav_mypick" href="#">내가 찜한 콘텐츠</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="header_profile_container">
+        <a class="main_profile_image" href="#">
+          <img
+            src="./imgs/avatar-seoyeon.svg"
+            alt="프로필 이미지"
+            class="user_avatar"
+          />
+           <p class="initial_y">Y</p>
+        </a>
+        <a class="user_my_page" href="#">욜로의 마이페이지</a>
+      </section>
     </header>
     <main>
       <div class="index_main_1">메인 1 영역입니다.</div>
@@ -25,3 +49,4 @@
     </footer>
   </body>
 </html>
+
