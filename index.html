@@ -3,22 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/style.css"/>
+    <link rel="stylesheet" href="./styles/style.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <title>cinemo</title>
   </head>
+
   <body>
     <header class="index_header">
       <section class="header_nav_container">
         <div class="header_logo_container">
-          <img class="netflex_identity" src="imgs/netflex-identity.svg" alt="아이덴티티 로고"></span>
+          <img
+            class="netflex_identity"
+            src="imgs/netflex-identity.svg"
+            alt="아이덴티티 로고"
+          />
         </div>
+
         <nav>
           <ul class="header_nav">
             <li><a class="nav_home" href="#">홈</a></li>
@@ -28,6 +37,7 @@
           </ul>
         </nav>
       </section>
+
       <section class="header_profile_container">
         <a class="main_profile_image" href="#">
           <img
@@ -35,53 +45,64 @@
             alt="프로필 이미지"
             class="user_avatar"
           />
-           <p class="initial_y">Y</p>
+          <p class="initial_y">Y</p>
         </a>
+
         <a class="user_my_page" href="#">욜로의 마이페이지</a>
       </section>
     </header>
+
     <main>
-      <div class="index_main_1">
+      <!-- 히어로 섹션 -->
+      <section class="index_main_1">
         <div class="hero_image">
-          <img src="imgs/quiet-orbit.png" alt="hero_images" />
+          <img src="imgs/quiet-orbit.png" alt="고요의 궤도 이미지" />
         </div>
+
         <div class="hero_text">
           <div class="hero_top">
             <span class="hero_top_1-1">이번 주의 발견</span>
             <span class="hero_top_1-2">VOL. 01</span>
           </div>
+
           <div class="hero_title">
             <p class="hero_title_1-1">고요의 궤도</p>
             <p class="hero_title_1-2">QUIET ORBIT</p>
           </div>
+
           <div class="hero_info">
             <span>2026 · SF · 미스터리</span>
             <span>15+</span>
             <span>1시간 48분</span>
           </div>
+
           <div class="hero_desc">
             모든 소리가 사라진 해안, 정체를 알 수 없는 신호가 도착한다. 마지막
             관측자는 그 고요 속으로 한 걸음 다가선다.
           </div>
+
           <div class="hero_action">
             <button class="hero_btn_more">↗ 작품 살펴보기</button>
             <button class="hero_btn_wish">+ 찜하기</button>
           </div>
         </div>
+
         <div class="hero_right_text">
           <p class="hero_right_text_1">
             고요가 시작되는 곳, 이야기가 깨어난다.
           </p>
           <p class="hero_right_text_2">A CINEMO ORIGINAL CONCEPT</p>
         </div>
-        </div>
-      </div>
-      <section class="movie-section">
+      </section>
+
+      <!-- 첫 번째 무비 리스트 -->
+      <section class="movie-section-1">
         <div class="section-header">
           <div class="section-heading">
             <p class="section-title">오늘, 새로운 세계로</p>
             <p class="section-count">4편의 이야기</p>
           </div>
+
           <p class="section-description">
             낯선 풍경 속에서 시작되는 네 편의 이야기
           </p>
@@ -97,6 +118,7 @@
               <span>15+</span>
             </p>
           </div>
+
           <div class="movie-card">
             <img src="./imgs/last-platform.png" alt="마지막 승강장 이미지" />
             <p class="movie-title">마지막 승강장</p>
@@ -105,6 +127,7 @@
               <span>12+</span>
             </p>
           </div>
+
           <div class="movie-card">
             <img src="./imgs/blue-hour.png" alt="파란 시간 이미지" />
             <p class="movie-title">파란 시간</p>
@@ -114,6 +137,7 @@
               <span>12+</span>
             </p>
           </div>
+
           <div class="movie-card">
             <img src="./imgs/forest-letter.png" alt="숲에서 온 편지 이미지" />
             <p class="movie-title">숲에서 온 편지</p>
@@ -125,7 +149,63 @@
           </div>
         </div>
       </section>
+
+      <!-- 두 번째 무비 리스트 -->
+      <section class="movie-section-2">
+        <div class="section-header">
+          <div class="section-heading">
+            <p class="section-title">밤이 깊어질 때</p>
+            <p class="section-count">4편의 이야기</p>
+          </div>
+
+          <p class="section-description">
+            하루의 끝에 오래 남을, 조용하고 짙은 장면들
+          </p>
+        </div>
+
+        <div class="movie-list">
+          <div class="movie-card">
+            <img src="./imgs/after-rain.png" alt="비가 그친 자리 이미지" />
+            <p class="movie-title">비가 그친 자리</p>
+            <p class="movie-info">
+              <span class="movie-info-dot">드라마</span>
+              <span>전체</span>
+            </p>
+          </div>
+
+          <div class="movie-card">
+            <img src="./imgs/night-diver.png" alt="밤의 잠수부 이미지" />
+            <p class="movie-title">밤의 잠수부</p>
+            <p class="movie-info">
+              <span class="movie-info-dot">스릴러</span>
+              <span class="movie-info-dot">미스터리</span>
+              <span>15+</span>
+            </p>
+          </div>
+
+          <div class="movie-card">
+            <img src="./imgs/forest-letter.png" alt="숲에서 온 편지 이미지" />
+            <p class="movie-title">숲에서 온 편지</p>
+            <p class="movie-info">
+              <span class="movie-info-dot">판타지</span>
+              <span class="movie-info-dot">드라마</span>
+              <span>전체</span>
+            </p>
+          </div>
+
+          <div class="movie-card">
+            <img src="./imgs/blue-hour.png" alt="파란 시간 이미지" />
+            <p class="movie-title">파란 시간</p>
+            <p class="movie-info">
+              <span class="movie-info-dot">로맨스</span>
+              <span class="movie-info-dot">드라마</span>
+              <span>12+</span>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+
     <footer id="footer">
       <div class="footer-menu">
         <a href="#">서비스 소개</a>
@@ -133,16 +213,17 @@
         <a href="#">개인정보 처리방침</a>
         <a href="#">고객센터</a>
       </div>
+
       <div class="footer-info">
         <span>CINEMO는 학습을 위한 가상의 OTT 서비스입니다.</span>
         <span>
           콘텐츠와 인물은 모두 허구이며 실제 결제·재생은 제공하지 않습니다.
         </span>
       </div>
+
       <div class="footer-copyright">
         © 2026 CINEMO. A FICTIONAL STREAMING PROJECT.
       </div>
     </footer>
   </body>
 </html>
-
