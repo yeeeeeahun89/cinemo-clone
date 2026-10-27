@@ -18,16 +18,12 @@
   </head>
 
   <body>
+    <!-- 헤더 -->
     <header class="index_header">
       <section class="header_nav_container">
-        <div class="header_logo_container">
-          <img
-            class="netflex_identity"
-            src="imgs/netflex-identity.svg"
-            alt="아이덴티티 로고"
-          />
-        </div>
-
+        <a href="#">
+          <img class="netflex_identity" src="./imgs/netflex-identity.svg" alt="아이덴티티 로고"></span>
+        </a>
         <nav>
           <ul class="header_nav">
             <li><a class="nav_home" href="#">홈</a></li>
@@ -37,7 +33,6 @@
           </ul>
         </nav>
       </section>
-
       <section class="header_profile_container">
         <a class="main_profile_image" href="#">
           <img
@@ -45,12 +40,19 @@
             alt="프로필 이미지"
             class="user_avatar"
           />
-          <p class="initial_y">Y</p>
+           <p class="initial_y">Y</p>
         </a>
-
         <a class="user_my_page" href="#">욜로의 마이페이지</a>
       </section>
     </header>
+    <nav>
+          <ul class="header_nav_mobile">
+            <li><a class="nav_home_mobile" href="#">홈</a></li>
+            <li><a class="nav_movie_mobile" href="#">영화</a></li>
+            <li><a class="nav_series_mobile" href="#">시리즈</a></li>
+            <li><a class="nav_mypick_mobile" href="#">내가 찜한 콘텐츠</a></li>
+          </ul>
+        </nav>
 
     <main>
       <!-- 히어로 섹션 -->
@@ -82,8 +84,14 @@
           </div>
 
           <div class="hero_action">
-            <button class="hero_btn_more">↗ 작품 살펴보기</button>
-            <button class="hero_btn_wish">+ 찜하기</button>
+            <button class="hero_btn_more">
+              <img src="./icon/arrow-up-right.svg" alt="">
+              작품 살펴보기
+            </button>
+            <button class="hero_btn_wish">
+              <img src="./icon/plus.svg" alt="">
+              찜하기
+            </button>
           </div>
         </div>
 
