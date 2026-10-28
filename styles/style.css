@@ -373,10 +373,6 @@ body {
   color: #acaeb3;
 }
 
-.nav_home {
-  color: #f3f1ed;
-}
-
 .header_logo_container {
   display: flex;
   flex-direction: row;
