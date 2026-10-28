@@ -337,15 +337,6 @@ body {
   }
 }
 
-.index_header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #101113;
-  min-width: 400px;
-}
-
 .netflex_identity {
   width: 113px;
   height: 29px;
