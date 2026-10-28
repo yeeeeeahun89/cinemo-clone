@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,37 +14,229 @@
     <title>cinemo - my page</title>
   </head>
   <body>
-    <section class="account_settings_sec">
-      <h2 class="account_settings_h2">계정 설정</h2>
-      <div class="list_1_email">
-        <div>
-          <p>이메일</p>
-          <p>yolo202617@example.com</p>
+    <header class="index_header">
+      <section class="header_nav_container">
+        <a href="./index.html">
+          <img class="netflex_identity" src="./imgs/netflex-identity.svg" alt="아이덴티티 로고"></span>
+        </a>
+        <nav>
+          <ul class="header_nav">
+            <li><a class="nav_home" href="./index.html">홈</a></li>
+            <li><a class="nav_movie" href="#">영화</a></li>
+            <li><a class="nav_series" href="#">시리즈</a></li>
+            <li><a class="nav_mypick" href="#">내가 찜한 콘텐츠</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="header_profile_container">
+        <a class="main_profile_image" href="./mypage.html">
+          <img
+            src="./imgs/avatar-seoyeon.svg"
+            alt="프로필 이미지"
+            class="user_avatar"
+          />
+           <p class="initial_y">Y</p>
+        </a>
+        <a class="user_my_page" href="./mypage.html" style="color: #F28D77;">욜로의 마이페이지</a>
+      </section>
+    </header>
+    <nav>
+          <ul class="header_nav_mobile">
+            <li><a class="nav_home_mobile" href="./index.html">홈</a></li>
+            <li><a class="nav_movie_mobile" href="#">영화</a></li>
+            <li><a class="nav_series_mobile" href="#">시리즈</a></li>
+            <li><a class="nav_mypick_mobile" href="#">내가 찜한 콘텐츠</a></li>
+          </ul>
+        </nav>
+    <main>
+      <section class="my-page">
+        <!-- 마이페이지 타이틀-->
+        <div class="title">
+          <div class="label">My CINEMO</div>
+          <div class="page">마이페이지</div>
+          <div class="description">
+            취향을 모으고, 나만의 시간을 이어가세요.
+          </div>
         </div>
-        <a class="email_change_btn" href="#">변경</a>
-      </div>
-      <div>
-        <div class="list_2_password">
-          <p>비밀번호</p>
-          <p>••••••••••••</p>
+
+        <!-- 내 계정  -->
+        <div class="profile">
+          <div class="my-profile">
+            <div class="my-profile-icon">
+              <div class="profile-name">Y</div>
+              <img src="./imgs/Avatar_Y.png" alt="욜로의 프로필 아이콘" />
+            </div>
+
+            <div class="profile-card">
+              <div class="name">
+                <span class="my-name">욜로</span>
+                <span class="badge">기본 프로필</span>
+              </div>
+
+              <span class="message">나만의 영화 노트</span>
+              <span class="date-ing">2026년 10월부터 함께하는 중</span>
+            </div>
+          </div>
+
+          <div class="btn-change">
+            <div class="date">2026. 10 가입</div>
+            <button type="button">
+              <img src="./icon/profile-change.svg" alt="프로필 변경 아이콘" />
+              <a href="./profile.html">프로필 변경</a>
+            </button>
+          </div>
         </div>
-        <a class="password_change_btn" href="#">변경</a>
-      </div>
-      <div class="list_3_membership">
-        <div>
-          <p>멤버십</p>
-          <p>베이식 · 월 9,500원</p>
+
+        <!-- 내가 찜한 콘텐츠 -->
+        <div class="my-picks">
+          <div class="my-picks-header">
+            <p class="my-picks-title">내가 찜한 콘텐츠</p>
+            <span class="my-picks-count">4편</span>
+          </div>
+
+          <div class="my-picks-list-li">
+            <div class="my-picks-card">
+              <div class="my-picks-image">
+                <img src="./imgs/quiet-orbit.png" alt="고요의 궤도 이미지" />
+                <img class="check" src="./icon/check.svg" alt="찜한 콘텐츠" />
+              </div>
+              <p class="movie-title">고요의 궤도</p>
+              <p class="movie-info">
+                <span class="movie-info-dot">SF</span>
+                <span>미스터리</span>
+                <span>15+</span>
+              </p>
+            </div>
+
+            <div class="my-picks-card">
+              <div class="my-picks-image">
+                <img src="./imgs/blue-hour.png" alt="파란 시간 이미지" />
+                <img class="check" src="./icon/check.svg" alt="찜한 콘텐츠" />
+              </div>
+              <p class="movie-title">파란 시간</p>
+              <p class="movie-info">
+                <span class="movie-info-dot">로맨스</span>
+                <span>드라마</span>
+                <span>12+</span>
+              </p>
+            </div>
+
+            <div class="my-picks-card">
+              <div class="my-picks-image">
+                <img
+                  src="./imgs/forest-letter.png"
+                  alt="숲에서 온 편지 이미지"
+                />
+                <img class="check" src="./icon/check.svg" alt="찜한 콘텐츠" />
+              </div>
+              <p class="movie-title">숲에서 온 편지</p>
+              <p class="movie-info">
+                <span class="movie-info-dot">판타지</span>
+                <span>드라마</span>
+                <span>전체</span>
+              </p>
+            </div>
+
+            <div class="my-picks-card">
+              <div class="my-picks-image">
+                <img src="./imgs/night-diver.png" alt="밤의 잠수부 이미지" />
+                <img class="check" src="./icon/check.svg" alt="찜한 콘텐츠" />
+              </div>
+              <p class="movie-title">밤의 잠수부</p>
+              <p class="movie-info">
+                <span class="movie-info-dot">스릴러</span>
+                <span>미스터리</span>
+                <span>15+</span>
+              </p>
+            </div>
+          </div>
         </div>
-        <a class="membership_management_btn" href="#">관리</a>
-      </div>
-      <div class="list_4_lang">
-        <div>
-          <p>표시 언어</p>
-          <p>한국어</p>
+      </section>
+      <section class="account_settings_section">
+        <h2 class="account_settings_h2">계정 설정</h2>
+        <ul class="account_settings_li">
+          <li class="first_list">
+            <p class="setting_label">이메일</p>
+            <p class="setting_value">yolo202617@example.com</p>
+            <a class="setting_btn" href="#">변경</a>
+          </li>
+          <li class="second_list">
+            <p class="setting_label">비밀번호</p>
+            <p class="setting_value">••••••••••••</p>
+            <a class="setting_btn" href="#">변경</a>
+          </li>
+          <li class="third_list">
+            <p class="setting_label">멤버십</p>
+            <p class="setting_value">베이식 · 월 9,500원</p>
+            <a class="setting_btn" href="#">관리</a>
+          </li>
+          <li class="fourth_list">
+            <p class="setting_label">표시 언어</p>
+            <p class="setting_value">한국어</p>
+            <a class="setting_btn" href="#">변경</a>
+          </li>
+        </ul>
+        <div class="account_status">
+          <p class="status_note">내 계정으로 접속 중입니다.</p>
+          <a class="logout_button" href="./profile.html">로그아웃</a>
         </div>
-        <a class="lang_change_btn" href="#">변경</a>
+      </section>
+      <section class="account_settings_section_mobile">
+        <h2 class="account_settings_h2">계정 설정</h2>
+        <ul class="account_settings_li">
+          <li class="first_list">
+            <div class="setting_details">
+              <p class="setting_label">이메일</p>
+              <p class="setting_value">yolo202617@example.com</p>
+            </div>
+            <a class="setting_btn" href="#">변경</a>
+          </li>
+          <li class="second_list">
+            <div class="setting_details">
+              <p class="setting_label">비밀번호</p>
+              <p class="setting_value">••••••••••••</p>
+            </div>
+            <a class="setting_btn" href="#">변경</a>
+          </li>
+          <li class="third_list">
+            <div class="setting_details">
+              <p class="setting_label">멤버십</p>
+              <p class="setting_value">베이식 · 월 9,500원</p>
+            </div>
+            <a class="setting_btn" href="#">관리</a>
+          </li>
+          <li class="fourth_list">
+            <div class="setting_details">
+              <p class="setting_label">표시 언어</p>
+              <p class="setting_value">한국어</p>
+            </div>
+            <a class="setting_btn" href="#">변경</a>
+          </li>
+        </ul>
+        <div class="account_status">
+          <p class="status_note">내 계정으로 접속 중입니다.</p>
+          <a class="logout_button" href="#">로그아웃</a>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="footer-menu">
+        <a href="#">서비스 소개</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보 처리방침</a>
+        <a href="#">고객센터</a>
       </div>
-      <p class="status_info">내 계정으로 접속 중입니다.</p>
-    </section>
+
+      <div class="footer-info">
+        <span>CINEMO는 학습을 위한 가상의 OTT 서비스입니다.</span>
+        <span>
+          콘텐츠와 인물은 모두 허구이며 실제 결제·재생은 제공하지 않습니다.
+        </span>
+      </div>
+
+      <div class="footer-copyright">
+        © 2026 CINEMO. A FICTIONAL STREAMING PROJECT.
+      </div>
+    </footer>
   </body>
 </html>
