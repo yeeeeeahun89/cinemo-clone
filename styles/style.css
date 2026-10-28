@@ -688,9 +688,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 56px 64px;
+  padding: 56px 64px 48px;
   gap: 48px;
-
   background-color: #101113;
 }
 
@@ -838,7 +837,7 @@ body {
   flex-direction: column;
   width: 100%;
   gap: 24px;
-
+  height: 100%;
   background-color: #101113;
   color: white;
 }
@@ -863,12 +862,13 @@ body {
   color: #7e8289;
 }
 
-.my-picks-list {
+.my-picks-list-li {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   justify-content: flex-start;
   align-items: center;
+  height: 100%;
 }
 
 .my-picks-image {
@@ -927,8 +927,11 @@ body {
 /* 반응형 */
 @media screen and (max-width: 768px) {
   main {
-    padding: 36px 24px;
     gap: 36px;
+  }
+
+  .my-page {
+    padding: 36px 24px;
   }
 
   .page {
@@ -1003,7 +1006,7 @@ body {
     font-size: 20px;
   }
 
-  .my-picks-list {
+  .my-picks-list-li {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px 16px;
   }
