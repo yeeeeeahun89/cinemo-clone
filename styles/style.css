@@ -654,6 +654,150 @@ body {
   }
 }
 
+/*mypage account settings*/
+
+.account_settings_section {
+  width: 100%;
+  height: 417px;
+  background-color: #101113;
+  color: #f3f1ed;
+  box-sizing: border-box;
+  padding: 0px 64px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.account_settings_h2 {
+  color: #f3f1ed;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+[class$="list"] {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) auto;
+  column-gap: 24px;
+  border-bottom: 1px solid #303237;
+  height: 65px;
+  align-items: center;
+}
+
+.setting_label {
+  color: #acaeb3;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.setting_value {
+  color: #f3f1ed;
+  font-size: 14px;
+  line-height: 17px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.first_list {
+  border-top: 1px solid #303237;
+}
+
+.setting_btn {
+  color: #f28d77;
+  font-size: 13px;
+  line-height: 16px;
+  width: 24px;
+}
+
+.account_status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.status_note {
+  color: #7e8289;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.logout_button {
+  color: #acaeb3;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+}
+
+.account_settings_section_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 555px) {
+  .account_settings_section {
+    display: none;
+  }
+
+  .account_settings_section_mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #101113;
+    width: 100%;
+    height: 428px;
+    box-sizing: border-box;
+    padding: 0px 24px 40px;
+  }
+
+  .account_settings_h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .account_settings_li {
+    color: #f3f1ed;
+    background-color: #101113;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+    width: 100%;
+  }
+
+  [class$="list"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid #303237;
+  }
+
+  .setting_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .setting_label {
+    color: #acaeb3;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .setting_value {
+    overflow-wrap: anywhere;
+  }
+
+  .setting_btn {
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+  }
+}
+
 /* footer CSS */
 #footer {
   box-sizing: border-box;
