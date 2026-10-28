@@ -471,7 +471,7 @@ body {
   }
 
   .movie-list-li::-webkit-scrollbar {
-    height: 6px;
+    height: 3px;
   }
 
   .movie-list-li::-webkit-scrollbar-track {
