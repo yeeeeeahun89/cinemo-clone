@@ -1,3 +1,4 @@
+/* 공통 Header */
 body {
   font-family: "Inter", "Noto Sans KR", sans-serif;
   margin: 0;
@@ -90,7 +91,8 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+/* 공통 Header 반응형 */
+@media screen and (max-width: 390px) {
   .index_header {
     height: 72px;
     flex-direction: row;
@@ -140,6 +142,7 @@ body {
   }
 }
 
+/* 메인 페이지-Featured film */
 .index_main_1 {
   height: 590px;
   width: 100%;
@@ -356,7 +359,7 @@ body {
   }
 }
 
-/* main-movie-style */
+/* 메인 페이지-Browse collections */
 .movie-section-1 {
   box-sizing: border-box;
   width: 100%;
@@ -467,6 +470,7 @@ body {
   content: "";
 }
 
+/* 메인 페이지-Browse collections 반응형 */
 @media screen and (max-width: 390px) {
   .section-title {
     font-size: 20px;
@@ -502,11 +506,17 @@ body {
   }
 }
 
-/* footer CSS */
-#footer {
+/* 공통 Footer */
+footer {
+  max-width: 1312px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-section {
   box-sizing: border-box;
   width: 100%;
-  padding: 40px 64px;
+  padding: 40px 24px;
   background-color: #101113;
   border-top: 1px solid #303237;
   overflow: auto;
@@ -516,17 +526,18 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 32px;
   flex-wrap: nowrap;
   white-space: nowrap;
 }
 
-.footer-menu a {
+.footer-menu li {
+  display: inline;
   color: #acaeb3;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
   text-decoration: none;
   line-height: auto;
+  margin-right: 32px;
 }
 
 .footer-info {
@@ -537,7 +548,7 @@ body {
   line-height: 180%;
 }
 
-.footer-info span {
+.footer-info p {
   display: inline;
 }
 
@@ -549,19 +560,368 @@ body {
   line-height: auto;
 }
 
-@media (max-width: 390px) {
+/* 공통 Footer 반응형 */
+@media (min-width: 320px) and (max-width: 786px) {
   #footer {
     box-sizing: border-box;
-    padding: 32px 24px;
+    padding: 32px 16px;
   }
 
-  .footer-menu {
-    gap: 10px;
+  .footer-menu li {
+    margin-right: 10px;
   }
 
-  .footer-info span {
+  .footer-info p {
     display: block;
     margin: 0;
+  }
+}
+
+/* 마이페이지-Content */
+.my-page {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 56px 64px;
+  gap: 48px;
+
+  background-color: #101113;
+}
+
+.title {
+  box-sizing: border-box;
+}
+
+.label {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  line-height: auto;
+  color: #f28d77;
+}
+
+.page {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #f3f1ed;
+  padding-top: 12px;
+}
+
+.description {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  line-height: 170%;
+  color: #acaeb3;
+  padding-top: 12px;
+}
+
+/* 마이페이지-Content-내 계정 */
+.profile {
+  box-sizing: border-box;
+  background-color: #1a1c1f;
+  padding: 32px 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my-profile {
+  display: flex;
+  gap: 28px;
+}
+
+.my-profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-name {
+  width: 88px;
+  height: 88px;
+  border-radius: 8%;
+  background-color: #718c91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Inter", sans-serif;
+  font-size: 42.24px;
+  line-height: auto;
+  color: #f3f1ed;
+}
+
+/* 흰색 원형 무늬 */
+.profile-name::before {
+  content: "";
+  position: absolute;
+  width: 70.4px;
+  height: 70.4px;
+
+  border: 1px solid #f3f1ed;
+  border-radius: 50%;
+}
+
+/* 검은색 원형 무늬 */
+.profile-name::after {
+  content: "";
+  position: absolute;
+  width: 101.2px;
+  height: 101.2px;
+
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.my-name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #f3f1ed;
+}
+
+.badge {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 11px;
+  color: #f28d77;
+}
+
+.message {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  color: #acaeb3;
+}
+
+.date-ing {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 11px;
+  color: #7e8289;
+}
+
+.date {
+  display: none;
+}
+.btn-change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-change button {
+  border: 1px solid #303237;
+  border-radius: 4px;
+  background-color: transparent;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 22px;
+}
+
+.btn-change img {
+  width: 15px;
+  height: 13.5px;
+}
+
+.btn-change a {
+  text-decoration: none;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f3f1ed;
+}
+
+/* 마이페이지-Content-내가 찜한 콘텐츠 */
+.my-picks {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+
+  background-color: #101113;
+  color: white;
+}
+
+.my-picks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-picks-title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #f3f1ed;
+}
+
+.my-picks-count {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  color: #7e8289;
+}
+
+.my-picks-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.my-picks-image {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.my-picks-image img {
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+.my-picks-image .check {
+  position: absolute;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  margin: 10px;
+  padding: 6px;
+  background-color: #101113;
+  opacity: 85.1%;
+  border-radius: 4px;
+}
+
+.movie-title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #f3f1ed;
+  margin: 0;
+  padding-bottom: 4px;
+  white-space: nowrap;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 11px;
+  color: #acaeb3;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.movie-info-dot::after {
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50px;
+  margin: 0 8px 4px;
+  background-color: #acaeb3;
+  content: "";
+}
+
+/* 마이페이지-Content 반응형 */
+@media screen and (max-width: 768px) {
+  main {
+    padding: 36px 24px;
+    gap: 36px;
+  }
+
+  .page {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .profile {
+    flex-direction: column;
+    padding: 24px;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .my-profile {
+    gap: 20px;
+  }
+
+  .profile-name {
+    width: 64px;
+    height: 64px;
+    font-size: 30.72px;
+  }
+
+  .my-name {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f3f1ed;
+  }
+
+  .date-ing {
+    display: none;
+  }
+
+  .btn-change {
+    justify-content: space-between;
+  }
+
+  .date {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 11px;
+    color: #7e8289;
+
+    display: flex;
+  }
+
+  .btn-change button {
+    height: 40px;
+  }
+
+  .btn-change img {
+    display: none;
+  }
+
+  .btn-change a {
+    text-decoration: none;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #f3f1ed;
+  }
+
+  .my-picks-title {
+    font-size: 20px;
+  }
+
+  .my-picks-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
+  }
+
+  .movie-title {
+    font-size: 14px;
   }
 }
 
@@ -698,6 +1058,7 @@ body {
   text-align: center;
 }
 
+/* 프로필 선택 페이지 반응형 */
 @media (max-width: 390px) {
   .profile_header {
     height: 72px;
