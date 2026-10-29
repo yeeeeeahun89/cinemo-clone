@@ -842,11 +842,6 @@ footer {
 
 /* 마이페이지-Content 반응형 */
 @media screen and (max-width: 768px) {
-  main {
-    padding: 36px 24px;
-    gap: 36px;
-  }
-
   .page {
     font-size: 30px;
   }
