@@ -181,7 +181,7 @@ body {
   display: flex;
   gap: 47px;
   height: 100%;
-  width: calc(100% - 128px);
+  width: calc(100% - 48px);
   max-width: 1312px;
   top: 50%;
   left: 50%;
@@ -334,7 +334,7 @@ body {
   }
 
   .hero_box {
-    width: calc(100% - 48px);
+    width: calc(100% - 32px);
   }
 
   .hero_image {
@@ -1100,6 +1100,14 @@ footer {
 
   .profile_header img {
     margin-left: 24px;
+  }
+
+  .user_profile_line {
+    gap: 32px;
+  }
+
+  .profile_sec {
+    gap: 32px;
   }
 }
 
