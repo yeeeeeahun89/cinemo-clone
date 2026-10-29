@@ -936,7 +936,7 @@ footer {
   box-sizing: border-box;
 }
 
-.profile_header img {
+.profile_header svg {
   margin-left: 48px;
 }
 
@@ -983,29 +983,42 @@ footer {
   box-sizing: border-box;
 }
 
+.user_profile_line {
+  display: flex;
+  gap: 40px;
+}
+
+.profile_sec {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 56px 24px;
+  box-sizing: border-box;
+}
+
 .user_profile {
-  height: 209px;
-  width: 152px;
-  flex: 0 0 152px;
+  width: min(152px, 100%);
+  height: auto;
+  flex: 0 1 152px;
+  min-width: 0;
 }
 
 .user_profile_photo {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  flex-direction: center;
-  height: 152px;
-  width: 152px;
+  width: 100%;
+  height: auto;
   margin-bottom: 16px;
   cursor: pointer;
 }
 
 .user_profile_photo img {
-  height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .user_profile_info {
@@ -1058,10 +1071,13 @@ footer {
   text-align: center;
 }
 
-/* 프로필 선택 페이지 반응형 */
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   .profile_header {
     height: 72px;
+  }
+
+  .profile_header svg {
+    margin-left: 24px;
   }
 
   .profile_main {
@@ -1078,8 +1094,8 @@ footer {
   }
 
   .profile_sec {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .profile_header img {
