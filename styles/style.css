@@ -470,7 +470,7 @@ body {
 }
 
 /* 메인 페이지-Browse collections 반응형 */
-@media (min-width: 320px) and (max-width: 786px) {
+@media (max-width: 390px) {
   .movie-container {
     width: calc(100% - 32px);
     margin: 0 auto;
@@ -579,7 +579,7 @@ footer {
 }
 
 /* 공통 Footer 반응형 */
-@media (min-width: 320px) and (max-width: 786px) {
+@media (max-width: 390px) {
   footer {
     width: calc(100% - 32px);
     margin: 0 auto;
@@ -1080,7 +1080,8 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+/* 프로필 선택 페이지 반응형 */
+@media (max-width: 390px) {
   .profile_header {
     height: 72px;
   }
