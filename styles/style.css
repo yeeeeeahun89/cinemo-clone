@@ -1155,7 +1155,7 @@ footer {
   margin: 0 auto;
   height: 353px;
   color: #f3f1ed;
-  box-sizing: border-box;
+  box-sizing: content-box;
   padding: 0px 0px 64px;
   display: flex;
   flex-direction: column;
