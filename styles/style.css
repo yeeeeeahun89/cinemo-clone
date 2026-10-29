@@ -1057,14 +1057,11 @@ footer {
   content: "";
 }
 
-/* 반응형 */
+/* 마이페이지 반응형 */
 @media screen and (max-width: 768px) {
-  main {
-    gap: 36px;
-  }
-
-  .my-page {
-    padding: 36px 24px;
+  .main-container {
+    width: calc(100% - 48px);
+    margin: 0 auto;
   }
 
   .page {
