@@ -1,4 +1,4 @@
-/* 공통 Header */
+/* 공통 */
 body {
   font-family: "Inter", sans-serif;
   font-family: "Noto Sans KR", sans-serif;
@@ -39,6 +39,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 32px;
   font-size: 14px;
   font-weight: 400;
@@ -63,30 +64,90 @@ body {
 
 .main_profile_image {
   position: relative;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
 }
 
-.user_avatar {
+.header-profile {
   width: 32px;
   height: 32px;
   border-radius: 8px;
   flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-profile-name {
+  width: 100%;
+  height: 100%;
+  border-radius: 8%;
+  background-color: #718c91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15.36px;
+  line-height: auto;
+  color: #f3f1ed;
+}
+
+/* 흰색 원형 무늬 */
+.header-profile-name::before {
+  content: "";
+  position: absolute;
+  width: 25.6px;
+  height: 25.6px;
+  top: -10px;
+  right: -10px;
+
+  border: 1px solid #f3f1ed;
+  opacity: 31.37%;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* 검은색 원형 무늬 */
+.header-profile-name::after {
+  content: "";
+  position: absolute;
+  width: 36.8px;
+  height: 36.8px;
+  left: -13px;
+  bottom: -20px;
+
+  border: 1px solid #101113;
+  opacity: 18.82%;
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .initial_y {
-  color: #f3f1ed;
-  font-size: 15.36px;
-  width: 11px;
-  height: 19px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-profile-dot {
+  width: 1.76px;
+  height: 1.76px;
+  background-color: #24272d;
+  border-radius: 50%;
+
   position: absolute;
-  top: 6.5px;
-  left: 10.5px;
+  right: 5px;
+  bottom: 10px;
 }
 
 .user_my_page {
   font-size: 14px;
   color: #f3f1ed;
   width: 107px;
-  height: 17px;
+  line-height: 17px;
+  align-self: center;
 }
 
 .index_header_mobile {
@@ -136,6 +197,7 @@ body {
     background-color: #101113;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 24px;
     height: 48px;
     box-sizing: border-box;
@@ -593,15 +655,18 @@ footer {
 }
 
 /* 마이페이지-Content */
+.main-container {
+  max-width: 1312px;
+  width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
 .my-page {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 56px 64px;
+  padding: 0 0 64px;
   gap: 48px;
-
-  background-color: #101113;
 }
 
 .title {
@@ -644,19 +709,28 @@ footer {
 
 .my-profile {
   display: flex;
+  align-items: center;
   gap: 28px;
 }
 
 .my-profile-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-name {
   width: 88px;
   height: 88px;
   border-radius: 8%;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.profile-name {
+  width: 100%;
+  height: 100%;
+  border-radius: 8%;
+  box-sizing: border-box;
+  position: relative;
   background-color: #718c91;
   display: flex;
   align-items: center;
@@ -674,9 +748,13 @@ footer {
   position: absolute;
   width: 70.4px;
   height: 70.4px;
+  top: -20px;
+  right: -30px;
 
   border: 1px solid #f3f1ed;
+  opacity: 31.37%;
   border-radius: 50%;
+  z-index: 0;
 }
 
 /* 검은색 원형 무늬 */
@@ -685,9 +763,29 @@ footer {
   position: absolute;
   width: 101.2px;
   height: 101.2px;
+  left: -30px;
+  bottom: -57px;
 
-  border: 1px solid red;
+  border: 1px solid #101113;
+  opacity: 18.82%;
   border-radius: 50%;
+  z-index: 0;
+}
+
+.profile-letter {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-dot {
+  width: 4.84px;
+  height: 4.84px;
+  background-color: #24272d;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
 }
 
 .profile-card {
@@ -765,23 +863,34 @@ footer {
 /* 프로필 선택 페이지 */
 
 .profile_header {
-  width: 100%;
+  width: calc(100% - 48px);
+  max-width: 1312px;
+  margin: 0 auto;
   height: 88px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  box-sizing: border-box;
+  flex-direction: row;
 }
 
-.profile_header svg {
-  margin-left: 48px;
+.profile_header_logo {
+  align-items: center;
+  width: 113px;
+  height: 29px;
+}
+
+.profile_header_logo a {
+  width: 113px;
+  height: 29px;
 }
 
 .profile_main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 48px);
+  max-width: 1312px;
+  margin: 0 auto;
   padding-top: 116px;
   padding-bottom: 120px;
 }
@@ -816,25 +925,13 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
-  padding: 56px 64px;
+  padding: 56px 0px;
   box-sizing: border-box;
 }
 
 .user_profile_line {
   display: flex;
   gap: 40px;
-}
-
-.profile_sec {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 56px 24px;
-  box-sizing: border-box;
 }
 
 .user_profile {
@@ -901,7 +998,9 @@ footer {
 }
 
 .profile_footer {
-  width: 100%;
+  width: calc(100% - 48px);
+  max-width: 1312px;
+  margin: 0 auto;
   height: 100%;
   font-size: 11px;
   color: #7e8289;
@@ -909,18 +1008,18 @@ footer {
 }
 
 /* 프로필 선택 페이지 반응형 */
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   .profile_header {
     height: 72px;
-  }
-
-  .profile_header svg {
-    margin-left: 24px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
   }
 
   .profile_main {
     padding-bottom: 56px;
     padding-top: 56px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
   }
 
   .profile_text_2 {
@@ -929,11 +1028,6 @@ footer {
 
   .profile_text_3 {
     font-size: 13px;
-  }
-
-  .profile_sec {
-    padding-left: 24px;
-    padding-right: 24px;
   }
 
   .profile_header img {
@@ -947,154 +1041,15 @@ footer {
   .profile_sec {
     gap: 32px;
   }
-}
 
-/* 마이 페이지*/
-/* 마이페이지 타이틀 */
-.my-page {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 56px 64px 48px;
-  gap: 48px;
-  background-color: #101113;
-}
-
-.title {
-  box-sizing: border-box;
-}
-
-.label {
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  line-height: auto;
-  color: #f28d77;
-}
-
-.page {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  color: #f3f1ed;
-  padding-top: 12px;
-}
-
-.description {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 15px;
-  line-height: 170%;
-  color: #acaeb3;
-  padding-top: 12px;
-}
-
-/* 내 계정 */
-.profile {
-  box-sizing: border-box;
-  background-color: #1a1c1f;
-  padding: 32px 32px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.my-profile {
-  display: flex;
-  gap: 28px;
-}
-
-.my-profile-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-name {
-  position: absolute;
-  z-index: 1;
-  font-family: "Inter", sans-serif;
-  font-size: 42.24px;
-  line-height: 0;
-  color: #f3f1ed;
-  margin: 0;
-}
-
-.my-profile img {
-  position: relative;
-  width: 88px;
-  height: 88px;
-}
-
-.profile-card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.name {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.my-name {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: #f3f1ed;
-}
-
-.badge {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 11px;
-  color: #f28d77;
-}
-
-.message {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 13px;
-  color: #acaeb3;
-}
-
-.date-ing {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 11px;
-  color: #7e8289;
-}
-
-.date {
-  display: none;
-}
-.btn-change {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-change button {
-  border: 1px solid #303237;
-  border-radius: 4px;
-  background-color: transparent;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 22px;
-}
-
-.btn-change img {
-  width: 15px;
-  height: 13.5px;
-}
-
-.btn-change a {
-  text-decoration: none;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #f3f1ed;
+  .profile_footer {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    height: 100%;
+    font-size: 11px;
+    color: #7e8289;
+    text-align: center;
+  }
 }
 
 /* 내가 찜한 콘텐츠 */
@@ -1195,14 +1150,11 @@ footer {
   content: "";
 }
 
-/* 반응형 */
+/* 마이페이지 반응형 */
 @media screen and (max-width: 768px) {
-  main {
-    gap: 36px;
-  }
-
-  .my-page {
-    padding: 36px 24px;
+  .main-container {
+    width: calc(100% - 48px);
+    margin: 0 auto;
   }
 
   .page {
@@ -1224,16 +1176,45 @@ footer {
     gap: 20px;
   }
 
+  .my-profile-icon {
+    width: 64px;
+    height: 64px;
+  }
+
   .profile-name {
     width: 64px;
     height: 64px;
     font-size: 30.72px;
   }
 
-  .my-profile img {
-    position: relative;
-    width: 66px;
-    height: 66px;
+  /* 흰색 원형 무늬 */
+  .profile-name::before {
+    width: 51.2px;
+    height: 51.2px;
+    top: -15px;
+    right: -20px;
+  }
+
+  /* 검은색 원형 무늬 */
+  .profile-name::after {
+    content: "";
+    position: absolute;
+    width: 73.6px;
+    height: 73.6px;
+    left: -25px;
+    bottom: -43px;
+
+    border: 1px solid #101113;
+    opacity: 18.82%;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .profile-dot {
+    width: 4.84px;
+    height: 4.84px;
+    right: 10px;
+    bottom: 10px;
   }
 
   .my-name {
@@ -1289,21 +1270,19 @@ footer {
 }
 
 /*마이페이지-계정 설정 섹션*/
-.aaccount_settings_section {
-  width: calc(100% - 48px);
-  max-width: 1312px;
-}
 
 .account_settings_desktop {
-  width: 100%;
-  height: 417px;
-  background-color: #101113;
+  width: calc(100% - 48px);
+  max-width: 1312px;
+  margin: 0 auto;
+  height: 353px;
   color: #f3f1ed;
-  box-sizing: border-box;
-  padding: 0px 64px 64px;
+  box-sizing: content-box;
+  padding: 0px 0px 64px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #101113;
 }
 
 .account_settings_h3 {
@@ -1375,10 +1354,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .aaccount_settings_section {
-    width: calc(100% - 32px);
-  }
-
   .account_settings_desktop {
     display: none;
   }
@@ -1388,10 +1363,11 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     background-color: #101113;
-    width: 100%;
-    height: 428px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    height: 388px;
     box-sizing: border-box;
-    padding: 0px 24px 40px;
+    padding: 0px 0px 40px;
   }
 
   .account_settings_h3 {
