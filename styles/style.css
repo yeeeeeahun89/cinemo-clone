@@ -593,15 +593,18 @@ footer {
 }
 
 /* 마이페이지-Content */
+.main-container {
+  max-width: 1312px;
+  width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
 .my-page {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 56px 64px;
+  padding: 0 0 64px;
   gap: 48px;
-
-  background-color: #101113;
 }
 
 .title {
@@ -947,154 +950,6 @@ footer {
   .profile_sec {
     gap: 32px;
   }
-}
-
-/* 마이 페이지*/
-/* 마이페이지 타이틀 */
-.my-page {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 56px 64px 48px;
-  gap: 48px;
-  background-color: #101113;
-}
-
-.title {
-  box-sizing: border-box;
-}
-
-.label {
-  font-family: "Inter", sans-serif;
-  font-size: 11px;
-  line-height: auto;
-  color: #f28d77;
-}
-
-.page {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  color: #f3f1ed;
-  padding-top: 12px;
-}
-
-.description {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 15px;
-  line-height: 170%;
-  color: #acaeb3;
-  padding-top: 12px;
-}
-
-/* 내 계정 */
-.profile {
-  box-sizing: border-box;
-  background-color: #1a1c1f;
-  padding: 32px 32px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.my-profile {
-  display: flex;
-  gap: 28px;
-}
-
-.my-profile-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-name {
-  position: absolute;
-  z-index: 1;
-  font-family: "Inter", sans-serif;
-  font-size: 42.24px;
-  line-height: 0;
-  color: #f3f1ed;
-  margin: 0;
-}
-
-.my-profile img {
-  position: relative;
-  width: 88px;
-  height: 88px;
-}
-
-.profile-card {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.name {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.my-name {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: #f3f1ed;
-}
-
-.badge {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 11px;
-  color: #f28d77;
-}
-
-.message {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 13px;
-  color: #acaeb3;
-}
-
-.date-ing {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 11px;
-  color: #7e8289;
-}
-
-.date {
-  display: none;
-}
-.btn-change {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-change button {
-  border: 1px solid #303237;
-  border-radius: 4px;
-  background-color: transparent;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 22px;
-}
-
-.btn-change img {
-  width: 15px;
-  height: 13.5px;
-}
-
-.btn-change a {
-  text-decoration: none;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #f3f1ed;
 }
 
 /* 내가 찜한 콘텐츠 */
