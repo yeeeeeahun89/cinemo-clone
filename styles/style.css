@@ -6,6 +6,10 @@ body {
   background-color: #101113;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* 공통 헤더*/
 .index_header_desktop {
   display: flex;
@@ -51,6 +55,7 @@ body {
 .cinemo_img_box {
   flex-shrink: 0;
   width: 113px;
+  height: 29px;
 }
 
 .header_profile_container {
@@ -391,7 +396,7 @@ body {
   flex-shrink: 0;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 768px) {
   .index_main_1 {
     height: 573px;
   }
@@ -642,7 +647,7 @@ footer {
 }
 
 /* 공통 Footer 반응형 */
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   footer {
     width: calc(100% - 32px);
     margin: 0 auto;
@@ -874,14 +879,10 @@ footer {
 }
 
 .profile_header_logo {
+  width: 113px;
+  height: 29px;
+  flex-shrink: 0;
   align-items: center;
-  width: 113px;
-  height: 29px;
-}
-
-.profile_header_logo a {
-  width: 113px;
-  height: 29px;
 }
 
 .profile_main {
@@ -1153,7 +1154,7 @@ footer {
 /* 마이페이지 반응형 */
 @media screen and (max-width: 768px) {
   .main-container {
-    width: calc(100% - 48px);
+    width: calc(100% - 32px);
     margin: 0 auto;
   }
 
