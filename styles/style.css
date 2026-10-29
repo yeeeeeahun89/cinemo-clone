@@ -1,4 +1,4 @@
-/* 공통 Header */
+/* 공통 */
 body {
   font-family: "Inter", sans-serif;
   font-family: "Noto Sans KR", sans-serif;
@@ -39,6 +39,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 32px;
   font-size: 14px;
   font-weight: 400;
@@ -63,30 +64,35 @@ body {
 
 .main_profile_image {
   position: relative;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
 }
 
 .user_avatar {
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  flex-shrink: 0;
 }
 
 .initial_y {
   color: #f3f1ed;
   font-size: 15.36px;
   width: 11px;
-  height: 19px;
+  line-height: 19px;
   position: absolute;
   top: 6.5px;
-  left: 10.5px;
+  left: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .user_my_page {
   font-size: 14px;
   color: #f3f1ed;
   width: 107px;
-  height: 17px;
+  line-height: 17px;
+  align-self: center;
 }
 
 .index_header_mobile {
@@ -136,6 +142,7 @@ body {
     background-color: #101113;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 24px;
     height: 48px;
     box-sizing: border-box;
@@ -1289,21 +1296,19 @@ footer {
 }
 
 /*마이페이지-계정 설정 섹션*/
-.aaccount_settings_section {
-  width: calc(100% - 48px);
-  max-width: 1312px;
-}
 
 .account_settings_desktop {
-  width: 100%;
-  height: 417px;
-  background-color: #101113;
+  width: calc(100% - 48px);
+  max-width: 1312px;
+  margin: 0 auto;
+  height: 353px;
   color: #f3f1ed;
   box-sizing: border-box;
-  padding: 0px 64px 64px;
+  padding: 0px 0px 64px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #101113;
 }
 
 .account_settings_h3 {
@@ -1375,10 +1380,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .aaccount_settings_section {
-    width: calc(100% - 32px);
-  }
-
   .account_settings_desktop {
     display: none;
   }
@@ -1388,10 +1389,11 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     background-color: #101113;
-    width: 100%;
-    height: 428px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    height: 388px;
     box-sizing: border-box;
-    padding: 0px 24px 40px;
+    padding: 0px 0px 40px;
   }
 
   .account_settings_h3 {
