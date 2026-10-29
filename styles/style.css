@@ -360,12 +360,18 @@ body {
 }
 
 /* 메인 페이지-Browse collections */
+.movie-container {
+  max-width: 1312px;
+  width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
 .movie-section-1 {
   box-sizing: border-box;
   width: 100%;
   background-color: #101113;
   justify-content: flex-start;
-  margin-bottom: 48px;
+  margin: 16px 0 48px 0;
 }
 
 .movie-section-2 {
@@ -380,7 +386,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 64px;
   gap: 8px;
 }
 
@@ -389,14 +394,12 @@ body {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
 }
 
 .section-title {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  line-height: auto;
   margin: 0;
   color: #f3f1ed;
   white-space: nowrap;
@@ -405,7 +408,6 @@ body {
 .section-count {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
-  line-height: auto;
   margin: 0;
   color: #7e8289;
   white-space: nowrap;
@@ -414,7 +416,6 @@ body {
 .section-description {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
-  line-height: auto;
   margin: 0;
   color: #acaeb3;
   white-space: nowrap;
@@ -423,7 +424,7 @@ body {
 .movie-list-li {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 20px 64px 0;
+  padding: 20px 0;
   gap: 20px;
   justify-content: flex-start;
   align-items: center;
@@ -443,7 +444,6 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   color: #f3f1ed;
-  line-height: auto;
   margin: 0;
   padding-bottom: 4px;
   white-space: nowrap;
@@ -455,7 +455,6 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 11px;
   color: #acaeb3;
-  line-height: auto;
   margin: 0;
   white-space: nowrap;
 }
@@ -471,7 +470,28 @@ body {
 }
 
 /* 메인 페이지-Browse collections 반응형 */
-@media screen and (max-width: 390px) {
+@media (min-width: 320px) and (max-width: 786px) {
+  .movie-container {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+  }
+
+  .movie-section-1 {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #101113;
+    justify-content: flex-start;
+    margin: 16px 0 48px 0;
+  }
+
+  .movie-section-2 {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #101113;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+
   .section-title {
     font-size: 20px;
   }
@@ -483,14 +503,9 @@ body {
   .movie-list-li {
     display: grid;
     grid-template-columns: repeat(4, 240px);
-    padding: 18px 0 16px;
-    margin: 0 24px;
+    padding: 18px 0;
     gap: 20px;
     overflow-x: auto;
-  }
-
-  .section-header {
-    padding: 0 24px;
   }
 
   .movie-list-li::-webkit-scrollbar {
@@ -509,14 +524,14 @@ body {
 /* 공통 Footer */
 footer {
   max-width: 1312px;
-  width: 100%;
+  width: calc(100% - 48px);
   margin: 0 auto;
 }
 
 .footer-section {
   box-sizing: border-box;
   width: 100%;
-  padding: 40px 24px;
+  padding: 40px 0;
   background-color: #101113;
   border-top: 1px solid #303237;
   overflow: auto;
@@ -530,14 +545,17 @@ footer {
   white-space: nowrap;
 }
 
-.footer-menu li {
-  display: inline;
+.footer-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.footer-menu a {
   color: #acaeb3;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 12px;
   text-decoration: none;
-  line-height: auto;
-  margin-right: 32px;
 }
 
 .footer-info {
@@ -562,13 +580,9 @@ footer {
 
 /* 공통 Footer 반응형 */
 @media (min-width: 320px) and (max-width: 786px) {
-  #footer {
-    box-sizing: border-box;
-    padding: 32px 16px;
-  }
-
-  .footer-menu li {
-    margin-right: 10px;
+  footer {
+    width: calc(100% - 32px);
+    margin: 0 auto;
   }
 
   .footer-info p {
@@ -842,11 +856,6 @@ footer {
 
 /* 마이페이지-Content 반응형 */
 @media screen and (max-width: 768px) {
-  main {
-    padding: 36px 24px;
-    gap: 36px;
-  }
-
   .page {
     font-size: 30px;
   }
