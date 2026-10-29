@@ -69,22 +69,77 @@ body {
   flex-shrink: 0;
 }
 
-.user_avatar {
+.header-profile {
   width: 32px;
   height: 32px;
   border-radius: 8px;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-profile-name {
+  width: 100%;
+  height: 100%;
+  border-radius: 8%;
+  background-color: #718c91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15.36px;
+  line-height: auto;
+  color: #f3f1ed;
+}
+
+/* 흰색 원형 무늬 */
+.header-profile-name::before {
+  content: "";
+  position: absolute;
+  width: 25.6px;
+  height: 25.6px;
+  top: -10px;
+  right: -10px;
+
+  border: 1px solid #f3f1ed;
+  opacity: 31.37%;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* 검은색 원형 무늬 */
+.header-profile-name::after {
+  content: "";
+  position: absolute;
+  width: 36.8px;
+  height: 36.8px;
+  left: -13px;
+  bottom: -20px;
+
+  border: 1px solid #101113;
+  opacity: 18.82%;
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .initial_y {
-  color: #f3f1ed;
-  font-size: 15.36px;
-  width: 11px;
-  line-height: 19px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-profile-dot {
+  width: 1.76px;
+  height: 1.76px;
+  background-color: #24272d;
+  border-radius: 50%;
+
   position: absolute;
-  top: 6.5px;
-  left: 12px;
-  justify-content: center;
-  align-items: center;
+  right: 5px;
+  bottom: 10px;
 }
 
 .user_my_page {
@@ -654,19 +709,28 @@ footer {
 
 .my-profile {
   display: flex;
+  align-items: center;
   gap: 28px;
 }
 
 .my-profile-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.profile-name {
   width: 88px;
   height: 88px;
   border-radius: 8%;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.profile-name {
+  width: 100%;
+  height: 100%;
+  border-radius: 8%;
+  box-sizing: border-box;
+  position: relative;
   background-color: #718c91;
   display: flex;
   align-items: center;
@@ -684,9 +748,13 @@ footer {
   position: absolute;
   width: 70.4px;
   height: 70.4px;
+  top: -20px;
+  right: -30px;
 
   border: 1px solid #f3f1ed;
+  opacity: 31.37%;
   border-radius: 50%;
+  z-index: 0;
 }
 
 /* 검은색 원형 무늬 */
@@ -695,9 +763,29 @@ footer {
   position: absolute;
   width: 101.2px;
   height: 101.2px;
+  left: -30px;
+  bottom: -57px;
 
-  border: 1px solid red;
+  border: 1px solid #101113;
+  opacity: 18.82%;
   border-radius: 50%;
+  z-index: 0;
+}
+
+.profile-letter {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-dot {
+  width: 4.84px;
+  height: 4.84px;
+  background-color: #24272d;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
 }
 
 .profile-card {
@@ -1083,16 +1171,45 @@ footer {
     gap: 20px;
   }
 
+  .my-profile-icon {
+    width: 64px;
+    height: 64px;
+  }
+
   .profile-name {
     width: 64px;
     height: 64px;
     font-size: 30.72px;
   }
 
-  .my-profile img {
-    position: relative;
-    width: 66px;
-    height: 66px;
+  /* 흰색 원형 무늬 */
+  .profile-name::before {
+    width: 51.2px;
+    height: 51.2px;
+    top: -15px;
+    right: -20px;
+  }
+
+  /* 검은색 원형 무늬 */
+  .profile-name::after {
+    content: "";
+    position: absolute;
+    width: 73.6px;
+    height: 73.6px;
+    left: -25px;
+    bottom: -43px;
+
+    border: 1px solid #101113;
+    opacity: 18.82%;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .profile-dot {
+    width: 4.84px;
+    height: 4.84px;
+    right: 10px;
+    bottom: 10px;
   }
 
   .my-name {
