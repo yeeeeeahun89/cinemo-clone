@@ -863,23 +863,34 @@ footer {
 /* 프로필 선택 페이지 */
 
 .profile_header {
-  width: 100%;
+  width: calc(100% - 48px);
+  max-width: 1312px;
+  margin: 0 auto;
   height: 88px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  box-sizing: border-box;
+  flex-direction: row;
 }
 
-.profile_header svg {
-  margin-left: 48px;
+.profile_header_logo {
+  align-items: center;
+  width: 113px;
+  height: 29px;
+}
+
+.profile_header_logo a {
+  width: 113px;
+  height: 29px;
 }
 
 .profile_main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 48px);
+  max-width: 1312px;
+  margin: 0 auto;
   padding-top: 116px;
   padding-bottom: 120px;
 }
@@ -914,25 +925,13 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
-  padding: 56px 64px;
+  padding: 56px 0px;
   box-sizing: border-box;
 }
 
 .user_profile_line {
   display: flex;
   gap: 40px;
-}
-
-.profile_sec {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 56px 24px;
-  box-sizing: border-box;
 }
 
 .user_profile {
@@ -999,7 +998,9 @@ footer {
 }
 
 .profile_footer {
-  width: 100%;
+  width: calc(100% - 48px);
+  max-width: 1312px;
+  margin: 0 auto;
   height: 100%;
   font-size: 11px;
   color: #7e8289;
@@ -1007,18 +1008,18 @@ footer {
 }
 
 /* 프로필 선택 페이지 반응형 */
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   .profile_header {
     height: 72px;
-  }
-
-  .profile_header svg {
-    margin-left: 24px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
   }
 
   .profile_main {
     padding-bottom: 56px;
     padding-top: 56px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
   }
 
   .profile_text_2 {
@@ -1027,11 +1028,6 @@ footer {
 
   .profile_text_3 {
     font-size: 13px;
-  }
-
-  .profile_sec {
-    padding-left: 24px;
-    padding-right: 24px;
   }
 
   .profile_header img {
@@ -1044,6 +1040,15 @@ footer {
 
   .profile_sec {
     gap: 32px;
+  }
+
+  .profile_footer {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    height: 100%;
+    font-size: 11px;
+    color: #7e8289;
+    text-align: center;
   }
 }
 
