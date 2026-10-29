@@ -762,179 +762,6 @@ footer {
   color: #f3f1ed;
 }
 
-/* 마이페이지-Content-내가 찜한 콘텐츠 */
-.my-picks {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 24px;
-
-  background-color: #101113;
-  color: white;
-}
-
-.my-picks-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.my-picks-title {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0;
-  color: #f3f1ed;
-}
-
-.my-picks-count {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 12px;
-  color: #7e8289;
-}
-
-.my-picks-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.my-picks-image {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.my-picks-image img {
-  width: 100%;
-  padding-bottom: 12px;
-}
-
-.my-picks-image .check {
-  position: absolute;
-  box-sizing: border-box;
-  width: 28px;
-  height: 28px;
-  margin: 10px;
-  padding: 6px;
-  background-color: #101113;
-  opacity: 85.1%;
-  border-radius: 4px;
-}
-
-.movie-title {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 16px;
-  color: #f3f1ed;
-  margin: 0;
-  padding-bottom: 4px;
-  white-space: nowrap;
-}
-
-.movie-info {
-  display: flex;
-  align-items: center;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 11px;
-  color: #acaeb3;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.movie-info-dot::after {
-  display: inline-block;
-  width: 2px;
-  height: 2px;
-  border-radius: 50px;
-  margin: 0 8px 4px;
-  background-color: #acaeb3;
-  content: "";
-}
-
-/* 마이페이지-Content 반응형 */
-@media screen and (max-width: 768px) {
-  .page {
-    font-size: 30px;
-  }
-
-  .description {
-    font-size: 13px;
-  }
-
-  .profile {
-    flex-direction: column;
-    padding: 24px;
-    align-items: stretch;
-    gap: 24px;
-  }
-
-  .my-profile {
-    gap: 20px;
-  }
-
-  .profile-name {
-    width: 64px;
-    height: 64px;
-    font-size: 30.72px;
-  }
-
-  .my-name {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: #f3f1ed;
-  }
-
-  .date-ing {
-    display: none;
-  }
-
-  .btn-change {
-    justify-content: space-between;
-  }
-
-  .date {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 11px;
-    color: #7e8289;
-
-    display: flex;
-  }
-
-  .btn-change button {
-    height: 40px;
-  }
-
-  .btn-change img {
-    display: none;
-  }
-
-  .btn-change a {
-    text-decoration: none;
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: #f3f1ed;
-  }
-
-  .my-picks-title {
-    font-size: 20px;
-  }
-
-  .my-picks-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 16px;
-  }
-
-  .movie-title {
-    font-size: 14px;
-  }
-}
-
 /* 프로필 선택 페이지 */
 
 .profile_header {
@@ -1277,7 +1104,6 @@ footer {
   flex-direction: column;
   width: 100%;
   gap: 24px;
-  height: 100%;
   background-color: #101113;
   color: white;
 }
@@ -1302,39 +1128,44 @@ footer {
   color: #7e8289;
 }
 
+/* 내가 찜한 콘텐츠 목록 */
 .my-picks-list-li {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   justify-content: flex-start;
   align-items: center;
-  height: 100%;
 }
 
 .my-picks-image {
+  position: relative;
   display: flex;
   width: 100%;
   justify-content: flex-end;
   align-items: flex-start;
 }
 
-.my-picks-image img {
-  width: 100%;
-  padding-bottom: 12px;
+.my-picks-image input[type="checkbox"] {
+  display: none;
 }
 
 .my-picks-image .check {
   position: absolute;
-  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 0;
   width: 28px;
   height: 28px;
-  margin: 10px;
-  padding: 6px;
-  background-color: #101113;
-  opacity: 85.1%;
-  border-radius: 4px;
+  cursor: pointer;
 }
 
+/* 체크 해제 상태 */
+.my-picks-image input:not(:checked) + .check svg path {
+  opacity: 0;
+}
+
+/* 영화 정보 */
 .movie-title {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
@@ -1394,6 +1225,8 @@ footer {
   }
 
   .profile-name {
+    width: 64px;
+    height: 64px;
     font-size: 30.72px;
   }
 
@@ -1414,16 +1247,15 @@ footer {
     display: none;
   }
 
-  .btn-change {
-    justify-content: space-between;
-  }
-
   .date {
+    display: flex;
     font-family: "Noto Sans KR", sans-serif;
     font-size: 11px;
     color: #7e8289;
+  }
 
-    display: flex;
+  .btn-change {
+    justify-content: space-between;
   }
 
   .btn-change button {
