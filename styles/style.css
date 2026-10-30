@@ -25,6 +25,10 @@ a {
   gap: 56px;
 }
 
+.cinemo-box_mobile {
+  display: none;
+}
+
 .header_nav_desktop {
   display: flex;
   flex-direction: row;
@@ -50,12 +54,8 @@ a {
   color: #acaeb3;
   white-space: nowrap;
   width: max-content;
-}
-
-.cinemo_img_box {
-  flex-shrink: 0;
-  width: 113px;
-  height: 29px;
+  height: 17px;
+  line-height: 17px;
 }
 
 .header_profile_container {
@@ -148,11 +148,12 @@ a {
 }
 
 .user_my_page {
-  font-size: 14px;
   color: #f3f1ed;
+  font-size: 14px;
+  font-weight: 400;
   width: 107px;
-  line-height: 17px;
   align-self: center;
+  line-height: 17px;
 }
 
 .index_header_mobile {
@@ -160,6 +161,14 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .cinemo-box_pc {
+    display: none;
+  }
+
+  .cinemo-box_mobile {
+    display: flex;
+  }
+
   .header_nav_desktop {
     display: none;
   }
@@ -182,12 +191,6 @@ a {
     align-items: center;
     width: calc(100% - 32px);
     margin: 0 auto;
-  }
-
-  .cinemo_img_box {
-    width: 93px;
-    height: 23px;
-    flex-shrink: 0;
   }
 
   .user_avatar {
@@ -670,7 +673,7 @@ footer {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 0 0 64px;
+  padding: 36px 0px;
   gap: 48px;
 }
 
@@ -867,24 +870,44 @@ footer {
 
 /* 프로필 선택 페이지 */
 
-.profile_header {
+/*프로필 페이지 헤더(pc 및 모바일)*/
+.brand-and-navigation {
+  background-color: #101113;
+  height: 88px;
   width: calc(100% - 48px);
   max-width: 1312px;
   margin: 0 auto;
-  height: 88px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: row;
 }
 
-.profile_header_logo {
-  width: 113px;
-  height: 29px;
-  flex-shrink: 0;
-  align-items: center;
+.cinemo-logo-area-mobile {
+  display: none;
 }
 
+@media screen and (max-width: 768px) {
+  .cinemo-logo-area-pc {
+    display: none;
+  }
+
+  .cinemo-logo-area-mobile {
+    display: flex;
+  }
+
+  .brand-and-navigation {
+    height: 72px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+/*프로필 메인*/
 .profile_main {
   display: flex;
   flex-direction: column;
@@ -1012,8 +1035,6 @@ footer {
 @media (max-width: 768px) {
   .profile_header {
     height: 72px;
-    width: calc(100% - 32px);
-    margin: 0 auto;
   }
 
   .profile_main {
@@ -1271,7 +1292,6 @@ footer {
 }
 
 /*마이페이지-계정 설정 섹션*/
-
 .account_settings_desktop {
   width: calc(100% - 48px);
   max-width: 1312px;
@@ -1382,7 +1402,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 6px;
     width: 100%;
   }
 
