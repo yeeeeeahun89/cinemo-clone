@@ -1051,10 +1051,6 @@ footer {
     font-size: 13px;
   }
 
-  .user_profile_about {
-    display: none;
-  }
-
   .profile_header img {
     margin-left: 24px;
   }
@@ -1074,6 +1070,12 @@ footer {
     font-size: 11px;
     color: #7e8289;
     text-align: center;
+  }
+}
+
+@media (max-width: 735px) {
+  .user_profile_about {
+    display: none;
   }
 }
 
