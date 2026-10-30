@@ -912,7 +912,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 48px);
+  width: calc(100% - 32px);
   max-width: 1312px;
   margin: 0 auto;
   padding-top: 116px;
@@ -927,12 +927,12 @@ footer {
 .profile_text_1 {
   font-size: 10px;
   color: #f28d77;
-  margin-bottom: 16px;
 }
 
 .profile_text_2 {
   font-size: 40px;
   margin-bottom: 16px;
+  margin-top: 16px;
   font-weight: bold;
 }
 
@@ -1041,7 +1041,6 @@ footer {
     padding-bottom: 56px;
     padding-top: 56px;
     width: calc(100% - 32px);
-    margin: 0 auto;
   }
 
   .profile_text_2 {
@@ -1050,6 +1049,10 @@ footer {
 
   .profile_text_3 {
     font-size: 13px;
+  }
+
+  .user_profile_about {
+    display: none;
   }
 
   .profile_header img {
